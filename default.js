@@ -158,6 +158,8 @@ class Scorecard {
 
         renderScorecard: function () {
             
+            // Score field values
+
             document.getElementById("ScoreOnes").innerHTML = YS.formatScore(YS.scorecard.score.upper.ones);
             document.getElementById("ScoreTwos").innerHTML = YS.formatScore(YS.scorecard.score.upper.twos);
             document.getElementById("ScoreThrees").innerHTML = YS.formatScore(YS.scorecard.score.upper.threes);
@@ -176,6 +178,23 @@ class Scorecard {
             document.getElementById("ScoreUpperTotal").innerHTML = YS.formatScore(YS.scorecard.score.totalUpper);
             document.getElementById("ScoreLowerTotal").innerHTML = YS.formatScore(YS.scorecard.score.totalLower);
             document.getElementById("ScoreTotal").innerHTML = YS.formatScore(YS.scorecard.score.totalScore);
+
+            // Clear button display
+
+            document.getElementById("ClearOnes").style.display = (YS.scorecard.score.upper.ones > 0) ? "inline" : "none";
+            document.getElementById("ClearTwos").style.display = (YS.scorecard.score.upper.twos > 0) ? "inline" : "none";
+            document.getElementById("ClearThrees").style.display = (YS.scorecard.score.upper.threes > 0) ? "inline" : "none";
+            document.getElementById("ClearFours").style.display = (YS.scorecard.score.upper.fours > 0) ? "inline" : "none";
+            document.getElementById("ClearFives").style.display = (YS.scorecard.score.upper.fives > 0) ? "inline" : "none";
+            document.getElementById("ClearSixes").style.display = (YS.scorecard.score.upper.sixes > 0) ? "inline" : "none";
+
+            document.getElementById("ClearThreeOfKind").style.display = (YS.scorecard.score.lower.threeOfKind > 0) ? "inline" : "none";
+            document.getElementById("ClearFourOfKind").style.display = (YS.scorecard.score.lower.fourOfKind > 0) ? "inline" : "none";
+            document.getElementById("ClearFullHouse").style.display = (YS.scorecard.score.lower.fullHouse > 0) ? "inline" : "none";
+            document.getElementById("ClearSmallStraight").style.display = (YS.scorecard.score.lower.smallStraight > 0) ? "inline" : "none";
+            document.getElementById("ClearLargeStraight").style.display = (YS.scorecard.score.lower.largeStraight > 0) ? "inline" : "none";
+            document.getElementById("ClearYahtzee").style.display = (YS.scorecard.score.lower.yahtzee > 0) ? "inline" : "none";
+            document.getElementById("ClearChance").style.display = (YS.scorecard.score.lower.chance > 0) ? "inline" : "none";
 
             let bonusMessage = document.getElementById("BonusMessage");
             let bonusRemaining = document.getElementById("BonusRemaining");
@@ -246,6 +265,14 @@ class Scorecard {
             for (index in YS.allButtonSections) {
                 YS.hideButtons(YS.allButtonSections[index], YS.allLabelSections[index]);
             }
+        },
+
+        showClear: function (buttonID) {
+            document.getElementById(buttonID).style.display = "inline";
+        },
+
+        hideClear: function (buttonID) {
+            document.getElementById(buttonID).style.display = "none";
         },
 
         setFocus: function (inputID) {
