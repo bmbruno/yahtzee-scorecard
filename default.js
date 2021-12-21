@@ -196,6 +196,8 @@ class Scorecard {
             document.getElementById("ClearYahtzee").style.display = (YS.scorecard.score.lower.yahtzee > 0) ? "inline" : "none";
             document.getElementById("ClearChance").style.display = (YS.scorecard.score.lower.chance > 0) ? "inline" : "none";
 
+            YS.updateYahtzeeScoreButtonStatus();
+
             let bonusMessage = document.getElementById("BonusMessage");
             let bonusRemaining = document.getElementById("BonusRemaining");
             if (YS.scorecard.score.bonus === 35) {
@@ -231,24 +233,30 @@ class Scorecard {
 
         zeroYahtzee: function () {
             YS.updateScore("lower", "yahtzee", 0);
-            document.getElementById("AdditionalYahtzeeButton").style.display = "none";
-            document.getElementById("FirstYahtzeeButton").style.display = "inline";
             YS.renderScorecard();
         },
 
         resetYahtzee: function () {
             YS.updateScore("lower", "yahtzee", -1);
-            document.getElementById("AdditionalYahtzeeButton").style.display = "none";
-            document.getElementById("FirstYahtzeeButton").style.display = "inline";
             YS.renderScorecard();
         },
 
         updateYahtzeeScore: function (points) {
             YS.scorecard.addYahtzeeScore(points);
-            document.getElementById("AdditionalYahtzeeButton").style.display = "inline";
-            document.getElementById("FirstYahtzeeButton").style.display = "none";
             YS.renderScorecard();
             YS.saveScorecard();
+        },
+
+        updateYahtzeeScoreButtonStatus: function () {
+
+            if (YS.scorecard.score.lower.yahtzee >= 50) {
+                document.getElementById("AdditionalYahtzeeButton").style.display = "inline";
+                document.getElementById("FirstYahtzeeButton").style.display = "none";
+            } else {
+                document.getElementById("AdditionalYahtzeeButton").style.display = "none";
+                document.getElementById("FirstYahtzeeButton").style.display = "inline";
+            }
+
         },
 
         showButtons: function (buttonsID, labelID) {
