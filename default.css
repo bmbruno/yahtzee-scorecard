@@ -18,6 +18,7 @@ table td.summary-score { background-color: #000; color: #FFF; }
 .additional-yahtzee { display: none; }
 .bonus-message { display: none; color: rgb(0 90 12); font-weight: bold; background-color: #6eff6d; border-radius: 6px; padding: 4px 6px; }
 .bonus-remaining { display: inline; float: right; padding: 4px 6px; }
+.clear-button { float: right; color: rgb(180, 180, 180); }
 
 .menu { margin: 1em 0; text-align: center; }
 

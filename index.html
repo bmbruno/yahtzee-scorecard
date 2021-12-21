@@ -3,6 +3,7 @@
         <title>Yahtzee Scorecard</title>
         <link rel="stylesheet" href="reset.css" type="text/css" />
         <link rel="stylesheet" href="default.css" type="text/css" />
+        <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -11,7 +12,7 @@
             <tbody>
                 <tr>
                     <td class="score ones" id="ScoreOnes" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsOnes', 'LabelOnes');"></td>
-                    <td class="label" id="LabelOnes">Ones</td>
+                    <td class="label" id="LabelOnes">Ones <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('upper', 'ones', 'Ones');"></i></td>
                     <td class="buttons six-up" id="ButtonsOnes">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'ones', 0); YS.hideButtons('ButtonsOnes', 'LabelOnes');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'ones', 1); YS.hideButtons('ButtonsOnes', 'LabelOnes');">1</button>
@@ -23,7 +24,7 @@
                 </tr>
                 <tr>
                     <td class="score twos" id="ScoreTwos" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsTwos', 'LabelTwos');"></td>
-                    <td class="label" id="LabelTwos">Twos</td>
+                    <td class="label" id="LabelTwos">Twos <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('upper', 'twos', 'Twos');"></i></td>
                     <td class="buttons six-up" id="ButtonsTwos">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'twos', 0); YS.hideButtons('ButtonsTwos', 'LabelTwos');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'twos', 2); YS.hideButtons('ButtonsTwos', 'LabelTwos');">2</button>
@@ -35,7 +36,7 @@
                 </tr>
                 <tr>
                     <td class="score threes" id="ScoreThrees" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsThrees', 'LabelThrees');"></td>
-                    <td class="label" id="LabelThrees">Threes</td>
+                    <td class="label" id="LabelThrees">Threes <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('upper', 'threes', 'Threes');"></i></td>
                     <td class="buttons six-up" id="ButtonsThrees">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'threes', 0); YS.hideButtons('ButtonsThrees', 'LabelThrees');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'threes', 3); YS.hideButtons('ButtonsThrees', 'LabelThrees');">3</button>
@@ -47,7 +48,7 @@
                 </tr>
                 <tr>
                     <td class="score fours" id="ScoreFours" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsFours', 'LabelFours');"></td>
-                    <td class="label" id="LabelFours">Fours</td>
+                    <td class="label" id="LabelFours">Fours <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('upper', 'fours', 'Fours');"></i></td>
                     <td class="buttons six-up" id="ButtonsFours">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'fours', 0); YS.hideButtons('ButtonsFours', 'LabelFours');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'fours', 4); YS.hideButtons('ButtonsFours', 'LabelFours');">4</button>
@@ -59,7 +60,7 @@
                 </tr>
                 <tr>
                     <td class="score fives" id="ScoreFives" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsFives', 'LabelFives');"></td>
-                    <td class="label" id="LabelFives">Fives</td>
+                    <td class="label" id="LabelFives">Fives <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('upper', 'fives', 'Fives');"></i></td>
                     <td class="buttons six-up" id="ButtonsFives">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'fives', 0); YS.hideButtons('ButtonsFives', 'LabelFives');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'fives', 5); YS.hideButtons('ButtonsFives', 'LabelFives');">5</button>
@@ -71,7 +72,7 @@
                 </tr>
                 <tr>
                     <td class="score sixes" id="ScoreSixes" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsSixes', 'LabelSixes');"></td>
-                    <td class="label" id="LabelSixes">Sixes</td>
+                    <td class="label" id="LabelSixes">Sixes <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('upper', 'sixes', 'Sixes');"></i></td>
                     <td class="buttons six-up" id="ButtonsSixes">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'sixes', 0); YS.hideButtons('ButtonsSixes', 'LabelSixes');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('upper', 'sixes', 6); YS.hideButtons('ButtonsSixes', 'LabelSixes');">6</button>
@@ -91,7 +92,7 @@
                 
                 <tr>
                     <td class="score threeOfKind" id="ScoreThreeOfKind" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsThreeOfKind', 'LabelThreeOfKind'); YS.setFocus('InputThreeOfKind');"></td>
-                    <td class="label" id="LabelThreeOfKind">Three of a Kind</td>
+                    <td class="label" id="LabelThreeOfKind">Three of a Kind <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('lower', 'threeOfKind', 'Three of a Kind');"></i></td>
                     <td class="buttons" id="ButtonsThreeOfKind">
                         <form>
                             <input type="number" pattern="\d*" id="InputThreeOfKind" class="score-input">
@@ -101,7 +102,7 @@
                 </tr>
                 <tr>
                     <td class="score fourOfKind" id="ScoreFourOfKind" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsFourOfKind', 'LabelFourOfKind'); YS.setFocus('InputFourOfKind');"></td>
-                    <td class="label" id="LabelFourOfKind">Four of a Kind</td>
+                    <td class="label" id="LabelFourOfKind">Four of a Kind <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('lower', 'fourOfKind', 'Four of a Kind');"></i></td>
                     <td class="buttons" id="ButtonsFourOfKind">
                         <form>
                             <input type="number" pattern="\d*" id="InputFourOfKind" class="score-input">
@@ -111,7 +112,7 @@
                 </tr>
                 <tr>
                     <td class="score fullHouse" id="ScoreFullHouse" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsFullHouse', 'LabelFullHouse');"></td>
-                    <td class="label" id="LabelFullHouse">Full House</td>
+                    <td class="label" id="LabelFullHouse">Full House <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('lower', 'fullHouse', 'Full House');"></i></td>
                     <td class="buttons" id="ButtonsFullHouse">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('lower', 'fullHouse', 0); YS.hideButtons('ButtonsFullHouse', 'LabelFullHouse');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('lower', 'fullHouse', 25); YS.hideButtons('ButtonsFullHouse', 'LabelFullHouse');">25</button>
@@ -119,7 +120,7 @@
                 </tr>
                 <tr>
                     <td class="score smallStraight" id="ScoreSmallStraight" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsSmallStraight', 'LabelSmallStraight');"></td>
-                    <td class="label" id="LabelSmallStraight">Small Straight</td>
+                    <td class="label" id="LabelSmallStraight">Small Straight <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('lower', 'smallStraight', 'Small Straight`');"></i></td>
                     <td class="buttons" id="ButtonsSmallStraight">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('lower', 'smallStraight', 0); YS.hideButtons('ButtonsSmallStraight', 'LabelSmallStraight');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('lower', 'smallStraight', 30); YS.hideButtons('ButtonsSmallStraight', 'LabelSmallStraight');">30</button>
@@ -127,7 +128,7 @@
                 </tr>
                 <tr>
                     <td class="score largeStraight" id="ScoreLargeStraight" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsLargeStraight', 'LabelLargeStraight');"></td>
-                    <td class="label" id="LabelLargeStraight">Large Straight</td>
+                    <td class="label" id="LabelLargeStraight">Large Straight <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('lower', 'largeStraight', 'Large Straight`');"></i></td>
                     <td class="buttons" id="ButtonsLargeStraight">
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('lower', 'largeStraight', 0); YS.hideButtons('ButtonsLargeStraight', 'LabelLargeStraight');">0</button>
                         <button value="1" class="btn add-to-score" onclick="YS.updateScore('lower', 'largeStraight', 40); YS.hideButtons('ButtonsLargeStraight', 'LabelLargeStraight');">40</button>
@@ -135,16 +136,16 @@
                 </tr>
                 <tr>
                     <td class="score yahtzee" id="ScoreYahtzee" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsYahtzee', 'LabelYahtzee');"></td>
-                    <td class="label" id="LabelYahtzee">Yahtzee</td>
+                    <td class="label" id="LabelYahtzee">Yahtzee <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('lower', 'yahtzee', 'Yahtzee');"></i></td>
                     <td class="buttons" id="ButtonsYahtzee">
-                        <button value="1" class="btn add-to-score" onclick="YS.resetYahtzee(); YS.hideButtons('ButtonsYahtzee', 'LabelYahtzee');">0</button>
+                        <button value="1" class="btn add-to-score" onclick="YS.zeroYahtzee(); YS.hideButtons('ButtonsYahtzee', 'LabelYahtzee');">0</button>
                         <button value="1" class="btn add-to-score first-yahtzee" onclick="YS.updateYahtzeeScore(50); YS.hideButtons('ButtonsYahtzee', 'LabelYahtzee');" id="FirstYahtzeeButton">50</button>
                         <button value="1" class="btn add-to-score additional-yahtzee" onclick="YS.updateYahtzeeScore(100); YS.hideButtons('ButtonsYahtzee', 'LabelYahtzee');" id="AdditionalYahtzeeButton">+100</button>
                     </td>
                 </tr>
                 <tr>
                     <td class="score chance" id="ScoreChance" onclick="YS.hideAllButtons(); YS.showButtons('ButtonsChance', 'LabelChance'); YS.setFocus('InputChance');"></td>
-                    <td class="label" id="LabelChance">Chance</td>
+                    <td class="label" id="LabelChance">Chance <i class="fa fa-times clear-button" aria-hidden="true" onclick="YS.promptClearScore('lower', 'chance', 'Chance');"></i></td>
                     <td class="buttons" id="ButtonsChance">
                         <form>
                             <input type="number" pattern="\d*" id="InputChance" class="score-input">

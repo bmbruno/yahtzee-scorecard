@@ -143,6 +143,19 @@ class Scorecard {
             YS.renderScorecard();
         },
 
+        promptClearScore: function (section, line, label) {
+
+            if (confirm(`Clear score for ${label}?`)) {
+
+                if (line === "yahtzee") {
+                    YS.resetYahtzee();
+                } else {
+                    YS.updateScore(section, line, -1);
+                }
+            }
+
+        },
+
         renderScorecard: function () {
             
             document.getElementById("ScoreOnes").innerHTML = YS.formatScore(YS.scorecard.score.upper.ones);
@@ -197,8 +210,15 @@ class Scorecard {
             return remaining;
         },
 
-        resetYahtzee: function () {
+        zeroYahtzee: function () {
             YS.updateScore("lower", "yahtzee", 0);
+            document.getElementById("AdditionalYahtzeeButton").style.display = "none";
+            document.getElementById("FirstYahtzeeButton").style.display = "inline";
+            YS.renderScorecard();
+        },
+
+        resetYahtzee: function () {
+            YS.updateScore("lower", "yahtzee", -1);
             document.getElementById("AdditionalYahtzeeButton").style.display = "none";
             document.getElementById("FirstYahtzeeButton").style.display = "inline";
             YS.renderScorecard();
@@ -234,7 +254,7 @@ class Scorecard {
 
         resetScorecard: function() {
             if (confirm("Are you sure you want to reset the scorecard?")) {
-                YS.resetYahtzee();
+                YS.zeroYahtzee();
                 YS.scorecard.resetScore();
                 YS.renderScorecard();
                 YS.clearStorage();
