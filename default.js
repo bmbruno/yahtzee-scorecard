@@ -181,20 +181,20 @@ class Scorecard {
 
             // Clear button display
 
-            document.getElementById("ClearOnes").style.display = (YS.scorecard.score.upper.ones > 0) ? "inline" : "none";
-            document.getElementById("ClearTwos").style.display = (YS.scorecard.score.upper.twos > 0) ? "inline" : "none";
-            document.getElementById("ClearThrees").style.display = (YS.scorecard.score.upper.threes > 0) ? "inline" : "none";
-            document.getElementById("ClearFours").style.display = (YS.scorecard.score.upper.fours > 0) ? "inline" : "none";
-            document.getElementById("ClearFives").style.display = (YS.scorecard.score.upper.fives > 0) ? "inline" : "none";
-            document.getElementById("ClearSixes").style.display = (YS.scorecard.score.upper.sixes > 0) ? "inline" : "none";
+            document.getElementById("ClearOnes").style.display = (YS.scorecard.score.upper.ones >= 0) ? "inline" : "none";
+            document.getElementById("ClearTwos").style.display = (YS.scorecard.score.upper.twos >= 0) ? "inline" : "none";
+            document.getElementById("ClearThrees").style.display = (YS.scorecard.score.upper.threes >= 0) ? "inline" : "none";
+            document.getElementById("ClearFours").style.display = (YS.scorecard.score.upper.fours >= 0) ? "inline" : "none";
+            document.getElementById("ClearFives").style.display = (YS.scorecard.score.upper.fives >= 0) ? "inline" : "none";
+            document.getElementById("ClearSixes").style.display = (YS.scorecard.score.upper.sixes >= 0) ? "inline" : "none";
 
-            document.getElementById("ClearThreeOfKind").style.display = (YS.scorecard.score.lower.threeOfKind > 0) ? "inline" : "none";
-            document.getElementById("ClearFourOfKind").style.display = (YS.scorecard.score.lower.fourOfKind > 0) ? "inline" : "none";
-            document.getElementById("ClearFullHouse").style.display = (YS.scorecard.score.lower.fullHouse > 0) ? "inline" : "none";
-            document.getElementById("ClearSmallStraight").style.display = (YS.scorecard.score.lower.smallStraight > 0) ? "inline" : "none";
-            document.getElementById("ClearLargeStraight").style.display = (YS.scorecard.score.lower.largeStraight > 0) ? "inline" : "none";
-            document.getElementById("ClearYahtzee").style.display = (YS.scorecard.score.lower.yahtzee > 0) ? "inline" : "none";
-            document.getElementById("ClearChance").style.display = (YS.scorecard.score.lower.chance > 0) ? "inline" : "none";
+            document.getElementById("ClearThreeOfKind").style.display = (YS.scorecard.score.lower.threeOfKind >= 0) ? "inline" : "none";
+            document.getElementById("ClearFourOfKind").style.display = (YS.scorecard.score.lower.fourOfKind >= 0) ? "inline" : "none";
+            document.getElementById("ClearFullHouse").style.display = (YS.scorecard.score.lower.fullHouse >= 0) ? "inline" : "none";
+            document.getElementById("ClearSmallStraight").style.display = (YS.scorecard.score.lower.smallStraight >= 0) ? "inline" : "none";
+            document.getElementById("ClearLargeStraight").style.display = (YS.scorecard.score.lower.largeStraight >= 0) ? "inline" : "none";
+            document.getElementById("ClearYahtzee").style.display = (YS.scorecard.score.lower.yahtzee >= 0) ? "inline" : "none";
+            document.getElementById("ClearChance").style.display = (YS.scorecard.score.lower.chance >= 0) ? "inline" : "none";
 
             YS.updateYahtzeeScoreButtonStatus();
 
