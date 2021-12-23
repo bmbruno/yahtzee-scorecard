@@ -311,6 +311,11 @@ class Scorecard {
         
         clearStorage: function () {
             window.localStorage.clear();
+        },
+
+        loadTheme: function () {
+            var themePicker = document.getElementById("ThemePicker");
+            var theme = themePicker.value;
         }
     };
 
