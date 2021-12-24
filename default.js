@@ -313,17 +313,38 @@ class Scorecard {
             window.localStorage.clear();
         },
 
-        loadTheme: function () {
+        setTheme: function () {
             var themePicker = document.getElementById("ThemePicker");
 
             document.body.classList = [];
             document.body.classList.add("theme");
             document.body.classList.add(themePicker.value);
+
+            YS.saveTheme(themePicker.value);
+        },
+
+        saveTheme: function (theme) {
+            window.localStorage.setItem("yahtzee-theme", theme);
+        },
+
+        loadTheme: function () {
+            return window.localStorage.getItem("yahtzee-theme");
+        },
+
+        initTheme: function () {
+            var theme = YS.loadTheme();
+
+            if (theme && theme != "") {
+                var themePicker = document.getElementById("ThemePicker");
+                themePicker.value = theme;
+                YS.setTheme();
+            }
         }
     };
 
     YS.loadScorecard();
     YS.scorecard.updateTotals();
     YS.renderScorecard();
+    YS.initTheme();
 
 })(window, document);
