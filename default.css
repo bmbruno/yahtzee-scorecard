@@ -21,6 +21,7 @@ table td.buttons button { margin: 0; padding: 0.25em 0.5em; min-width: 36px; }
 .clear-button { float: right; display: none; padding: 4px 8px; }
 .menu { margin: 1em 0; text-align: center; }
 .total-score, .final-score { font-weight: bold; font-size: 1.25em; }
+select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; border-radius: 4px; padding: 4px; }
 
 /* THEME: DEFAULT */
 
@@ -49,6 +50,8 @@ table td.buttons button { margin: 0; padding: 0.25em 0.5em; min-width: 36px; }
 .theme.sunnyday .bonus-message { color: rgb(107, 94, 22); background-color: #fffb00; }
 .theme.sunnyday .clear-button { color: rgb(14, 197, 0); }
 .theme.sunnyday .final-score { color: #000; border-bottom-left-radius: 8px; border-bottom-left-radius: 8px; }
+.theme.sunnyday select.theme-picker { background-color: #6cff6a; }
+
 
 @media (min-width: 40em) {
     body { max-width: 400px; margin: 0 auto; }

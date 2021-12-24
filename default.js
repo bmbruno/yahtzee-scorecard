@@ -315,7 +315,10 @@ class Scorecard {
 
         loadTheme: function () {
             var themePicker = document.getElementById("ThemePicker");
-            var theme = themePicker.value;
+
+            document.body.classList = [];
+            document.body.classList.add("theme");
+            document.body.classList.add(themePicker.value);
         }
     };
 
