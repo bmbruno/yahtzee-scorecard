@@ -41,7 +41,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 
 .theme.sunnyday { background-color: rgb(56, 221, 233); }
 .theme.sunnyday input[type="button"], .theme.sunnyday input[type="submit"], .theme.sunnyday button { background-color: rgb(136, 18, 18); color: #FFF; }
-.theme.sunnyday table.scorecard { background-color: #6cff6a; border-radius: 8px; }
+.theme.sunnyday table.scorecard { background-color: #6cff6a; }
 .theme.sunnyday table td { border: 1px solid #000; }
 .theme.sunnyday table td.score { color: #000; }
 .theme.sunnyday table td.label { background-color: #126900; color: rgb(255, 251, 0); text-shadow: 1px 1px 0 rgb(71, 53, 18); }
@@ -52,6 +52,20 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.sunnyday .final-score { color: #000; border-bottom-left-radius: 8px; border-bottom-left-radius: 8px; }
 .theme.sunnyday select.theme-picker { background-color: #6cff6a; }
 
+/* THEME: TERMINAL */
+
+.theme.terminal { background-color: rgb(0, 0, 0); }
+.theme.terminal input[type="button"], .theme.terminal input[type="submit"], .theme.terminal button { background-color: #0F0; color: #000; border-radius: 0; }
+.theme.terminal table.scorecard { background-color: #000000; }
+.theme.terminal table td { border: 1px solid #000; border: 1px solid #0F0; }
+.theme.terminal table td.score { color: #0F0; }
+.theme.terminal table td.label { background-color: #000000; color: #0F0; }
+.theme.terminal table td.buttons button { border: 1px solid #000; }
+.theme.terminal table td.summary-score { background-color: #000; color: #0F0; }
+.theme.terminal .bonus-message { color: #000; background-color: #0F0; border-radius: 0; }
+.theme.terminal .clear-button { color: #0F0; }
+.theme.terminal .final-score { color: #0F0; }
+.theme.terminal select.theme-picker { background-color: #000000; color: #0F0; border: 1px solid #0F0; }
 
 @media (min-width: 40em) {
     body { max-width: 400px; margin: 0 auto; }
