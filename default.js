@@ -310,7 +310,7 @@ class Scorecard {
         },
         
         clearStorage: function () {
-            window.localStorage.clear();
+            window.localStorage.removeItem("yahtzee-scorecard");
         },
 
         setTheme: function () {
