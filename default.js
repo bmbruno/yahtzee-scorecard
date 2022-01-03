@@ -289,6 +289,9 @@ class Scorecard {
 
         resetScorecard: function() {
             if (confirm("Are you sure you want to reset the scorecard?")) {
+
+                YS.hideAllButtons();
+
                 YS.zeroYahtzee();
                 YS.scorecard.resetScore();
                 YS.renderScorecard();
