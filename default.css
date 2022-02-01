@@ -107,7 +107,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 
 /* THEME: DIJON */
 
-.theme.dijon { background-color: #b5bd43; }
+.theme.dijon { background-color: #fff; }
 .theme.dijon input[type="button"], .theme.dijon input[type="submit"], .theme.dijon button { background-color: #FF0; color: #000; border-radius: 4px; font-weight: bold; box-shadow: none; border: 1px solid #000; }
 .theme.dijon input[type="number"] { border-radius: 4px; font-weight: bold; border: 1px solid #000; }
 .theme.dijon table.scorecard { background-color: #fbffd7; }
@@ -120,7 +120,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.dijon .clear-button { color: #5e5701; }
 .theme.dijon .score-label { font-size: 0.8em; }
 .theme.dijon .final-score { color: #000; }
-.theme.dijon select.theme-picker { background-color: #b5bd43; color: #000; border: 1px solid #000; border-radius: 3px; }
+.theme.dijon select.theme-picker { background-color: #fbffd7; color: #000; border: 1px solid #000; border-radius: 3px; }
 .theme.dijon .reset-button { padding: 3px 16px; background-color: #FF0; }
 
 @media (min-width: 40em) {

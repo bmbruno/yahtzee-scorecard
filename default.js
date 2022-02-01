@@ -200,13 +200,15 @@ class Scorecard {
 
             let bonusMessage = document.getElementById("BonusMessage");
             let bonusRemaining = document.getElementById("BonusRemaining");
+            let bonusTotal = document.getElementById("BonusTotal");
+
             if (YS.scorecard.score.bonus === 35) {
                 bonusMessage.style.display = "inline";
                 bonusRemaining.style.display = "none";
+                bonusTotal.innerHTML = YS.scorecard.score.totalUpper + YS.scorecard.score.bonus;
             } else {
                 bonusMessage.style.display = "none";
                 bonusRemaining.style.display = "inline";
-
                 bonusRemaining.innerHTML = `${YS.getBonusRemaining()} remaining`;
             }
 
