@@ -105,6 +105,24 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.ocean select.theme-picker { background-color: #7bc4ff; color: #00293a; border: 1px solid #000; border-radius: 10px; }
 .theme.ocean .reset-button { padding: 3px 16px; background-color: rgb(8, 46, 82); }
 
+/* THEME: DIJON */
+
+.theme.dijon { background-color: #b5bd43; }
+.theme.dijon input[type="button"], .theme.dijon input[type="submit"], .theme.dijon button { background-color: #FF0; color: #000; border-radius: 4px; font-weight: bold; box-shadow: none; border: 1px solid #000; }
+.theme.dijon input[type="number"] { border-radius: 4px; font-weight: bold; border: 1px solid #000; }
+.theme.dijon table.scorecard { background-color: #fbffd7; }
+.theme.dijon table td { border: 1px solid #000; }
+.theme.dijon table td.score { color: #000000; }
+.theme.dijon table td.label { background-color: #fcff55; color: #000; }
+.theme.dijon table td.label .text { text-shadow: none; }
+.theme.dijon table td.summary-score { background-color: #000; color: rgb(255, 255, 102); }
+.theme.dijon .bonus-message { color: #000; background-color: #FF0; border-radius: 6px; padding: 0.5em 1em; box-shadow: inset 0 0 4px #000; }
+.theme.dijon .clear-button { color: #5e5701; }
+.theme.dijon .score-label { font-size: 0.8em; }
+.theme.dijon .final-score { color: #000; }
+.theme.dijon select.theme-picker { background-color: #b5bd43; color: #000; border: 1px solid #000; border-radius: 3px; }
+.theme.dijon .reset-button { padding: 3px 16px; background-color: #FF0; }
+
 @media (min-width: 40em) {
     body { max-width: 400px; margin: 0 auto; }
 }
