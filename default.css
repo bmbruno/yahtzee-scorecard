@@ -17,7 +17,7 @@ table td.buttons input[type="submit"] { padding: 0.25em; }
 table td.buttons button { margin: 0; padding: 0.25em 0.5em; min-width: 36px; }
 
 .additional-yahtzee { display: none; }
-.bonus-message { display: none;  font-weight: bold; border-radius: 6px; padding: 4px 6px; }
+.bonus-message { font-weight: bold; border-radius: 6px; padding: 2px 4px; }
 .bonus-remaining { display: inline; float: right; padding: 4px 6px; }
 .clear-button { float: right; display: none; padding: 4px 8px; }
 .menu { margin: 1em 0; text-align: center; }
@@ -81,7 +81,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.berry table td.label .text { text-shadow: 0 0 16px #fff; }
 .theme.berry table td.buttons button { border: 1px solid #000; }
 .theme.berry table td.summary-score { background-color: #000; color: #ffffff; }
-.theme.berry .bonus-message { color: rgb(255, 255, 234); background-color: #cf00cc; border-radius: 16px; padding: 0.5em 1em; }
+.theme.berry .bonus-message { color: rgb(255, 255, 234); background-color: #cf00cc; border-radius: 8px; }
 .theme.berry .clear-button { color: #ff92e7; }
 .theme.berry .final-score { color: #000; }
 .theme.berry select.theme-picker { background-color: #d1f3ff; color: #4b00ff; border: 1px solid #000; }
@@ -98,7 +98,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.ocean table td.label { background-color: #348eca; color: rgb(235, 248, 255); }
 .theme.ocean table td.label .text { text-shadow: 1px 1px 0 #000; }
 .theme.ocean table td.summary-score { background-color: rgb(0, 31, 78); color: #ffffff; }
-.theme.ocean .bonus-message { color: rgb(136, 255, 249); background-color: #084ed1; border-radius: 16px; padding: 0.5em 1em; }
+.theme.ocean .bonus-message { color: rgb(136, 255, 249); background-color: #084ed1; border-radius: 12px; }
 .theme.ocean .clear-button { color: #004b69; }
 .theme.ocean .score-label { font-size: 0.8em; }
 .theme.ocean .final-score { color: #000; }
@@ -116,7 +116,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.dijon table td.label { background-color: #fcff55; color: #000; }
 .theme.dijon table td.label .text { text-shadow: none; }
 .theme.dijon table td.summary-score { background-color: #000; color: rgb(255, 255, 102); }
-.theme.dijon .bonus-message { color: #000; background-color: #FF0; border-radius: 6px; padding: 0.5em 1em; box-shadow: inset 0 0 4px #000; }
+.theme.dijon .bonus-message { color: #000; background-color: #FF0; }
 .theme.dijon .clear-button { color: #5e5701; }
 .theme.dijon .score-label { font-size: 0.8em; }
 .theme.dijon .final-score { color: #000; }

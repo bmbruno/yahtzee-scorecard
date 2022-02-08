@@ -198,16 +198,13 @@ class Scorecard {
 
             YS.updateYahtzeeScoreButtonStatus();
 
-            let bonusMessage = document.getElementById("BonusMessage");
             let bonusRemaining = document.getElementById("BonusRemaining");
-            let bonusTotal = document.getElementById("BonusTotal");
 
             if (YS.scorecard.score.bonus === 35) {
-                bonusMessage.style.display = "inline";
                 bonusRemaining.style.display = "none";
-                bonusTotal.innerHTML = YS.scorecard.score.totalUpper + YS.scorecard.score.bonus;
+                var upperWithBonus = YS.formatScore(YS.scorecard.score.totalUpper + YS.scorecard.score.bonus);
+                document.getElementById("ScoreUpperTotal").innerHTML = `${YS.formatScore(YS.scorecard.score.totalUpper)} + <span class='bonus-message'>35 bonus</span> = ${upperWithBonus}`;
             } else {
-                bonusMessage.style.display = "none";
                 bonusRemaining.style.display = "inline";
                 bonusRemaining.innerHTML = `${YS.getBonusRemaining()} remaining`;
             }
