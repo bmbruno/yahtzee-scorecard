@@ -98,7 +98,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.ocean table td.label { background-color: #348eca; color: rgb(235, 248, 255); }
 .theme.ocean table td.label .text { text-shadow: 1px 1px 0 #000; }
 .theme.ocean table td.summary-score { background-color: rgb(0, 31, 78); color: #ffffff; }
-.theme.ocean .bonus-message { color: rgb(136, 255, 249); background-color: #084ed1; border-radius: 12px; }
+.theme.ocean .bonus-message { color: rgb(136, 255, 249); background-color: #084ed1; border-radius: 8px; }
 .theme.ocean .clear-button { color: #004b69; }
 .theme.ocean .score-label { font-size: 0.8em; }
 .theme.ocean .final-score { color: #000; }
