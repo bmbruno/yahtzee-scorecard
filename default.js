@@ -27,7 +27,9 @@ class Scorecard {
 
             totalUpper: -1,
             totalLower: -1,
-            totalScore: -1
+            totalScore: -1,
+
+            count: 0
         }
     }
 
@@ -45,11 +47,31 @@ class Scorecard {
     }
 
     updateTotals() {
+
+        // Update total scores (upper, lower, bonus, total)
         this.score.totalUpper = this.getSectionScore(this.score.upper);
         this.score.totalLower = this.getSectionScore(this.score.lower);
         this.score.bonus = (this.score.totalUpper >= 63) ? 35 : 0;
 
         this.score.totalScore = this.score.totalUpper + this.score.bonus + this.score.totalLower;
+
+        // Update turn counter
+        this.score.count = 0;
+
+        if (this.score.upper.ones > -1 ) { this.score.count++; }
+        if (this.score.upper.twos > -1 ) { this.score.count++; }
+        if (this.score.upper.threes > -1 ) { this.score.count++; }
+        if (this.score.upper.fours > -1 ) { this.score.count++; }
+        if (this.score.upper.fives > -1 ) { this.score.count++; }
+        if (this.score.upper.sixes > -1 ) { this.score.count++; }
+
+        if (this.score.lower.threeOfKind > -1 ) { this.score.count++; }
+        if (this.score.lower.fourOfKind > -1 ) { this.score.count++; }
+        if (this.score.lower.fullHouse > -1 ) { this.score.count++; }
+        if (this.score.lower.smallStraight > -1 ) { this.score.count++; }
+        if (this.score.lower.largeStraight > -1 ) { this.score.count++; }
+        if (this.score.lower.yahtzee > -1 ) { this.score.count++; }
+        if (this.score.lower.chance > -1 ) { this.score.count++; }
     }
 
     getSectionScore(lines) {
@@ -85,6 +107,8 @@ class Scorecard {
         this.score.totalUpper = 0;
         this.score.totalLower = 0;
         this.score.totalScore = 0;
+
+        this.score.count = 0;
     }
 }
 
