@@ -40,7 +40,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 
 /* THEME: MIDNIGHT */
 
-.theme.midnight { background: rgb(3,84,133); background: linear-gradient(180deg, rgb(0 118 189) 0%, rgb(172 0 175) 100%) }
+.theme.midnight { background: rgb(3,84,133); background: linear-gradient(180deg, rgb(0 118 189) 0%, rgb(172 0 175) 100%); }
 .theme.midnight input[type="button"], .theme.midnight input[type="submit"], .theme.midnight button { background-color: #5100b3; color: #00e7ff; border-radius: 4px; font-weight: bold; box-shadow: none; border: 1px solid #000; }
 .theme.midnight input[type="number"] { border-radius: 4px; font-weight: bold; border: 1px solid #000; }
 .theme.midnight table td { border: 1px solid rgb(0, 0, 0); }
@@ -124,6 +124,23 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.sunflower .final-score { color: #000; }
 .theme.sunflower select.theme-picker { background-color: #fbffd7; color: #000; border: 1px solid #000; border-radius: 3px; }
 .theme.sunflower .reset-button { padding: 3px 16px; background-color: #FF0; }
+
+/* THEME: COLORFUL */
+
+.theme.colorful { background-image: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,146,0,1) 20%, rgba(255,255,0,1) 40%, rgba(0,255,0,1) 60%, rgba(0,0,255,1) 80%, rgba(203,0,255,1) 100%); }
+.theme.colorful input[type="button"], .theme.colorful input[type="submit"], .theme.colorful button { background-color: #000; color: #FFF; border-radius: 4px; font-weight: bold; box-shadow: none; border: 1px solid #000; }
+.theme.colorful input[type="number"] { border-radius: 4px; font-weight: bold; border: 1px solid #000; }
+.theme.colorful table td { border: 1px solid rgb(0, 0, 0); }
+.theme.colorful table td.score { background-color: rgba(0, 0, 0, 0.35); color: #ffffff; font-weight: bold; text-shadow: 0px 0px 8px #000; }
+.theme.colorful table td.label { background-color: rgba(0, 0, 0, 0.65); color: #eee; }
+.theme.colorful table td.label .text { text-shadow: none; }
+.theme.colorful table td.summary-score { background-color: rgba(0, 0, 0, 0.75); color: #fff; }
+.theme.colorful .bonus-message { color: #000; background-color: #FFF; }
+.theme.colorful .clear-button { color: #d8d8d8; }
+.theme.colorful .score-label { font-size: 0.8em; }
+.theme.colorful .final-score { color: rgb(255, 255, 255); box-shadow: inset 0 0 32px rgba(0, 0, 0, 0.65); }
+.theme.colorful select.theme-picker { background-color: #000; color: #FFF; border: 1px solid #000; border-radius: 3px; }
+.theme.colorful .reset-button { padding: 3px 16px; background-color: #000; }
 
 @media (min-width: 40em) {
     body { max-width: 400px; margin: 0 auto; }
