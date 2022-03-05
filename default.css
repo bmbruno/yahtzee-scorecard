@@ -38,20 +38,22 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.default .clear-button { color: rgb(180, 180, 180); }
 .theme.default .final-score { color: #000; }
 
-/* THEME: SUNNY DAY */
+/* THEME: MIDNIGHT */
 
-.theme.sunnyday { background-color: rgb(56, 221, 233); }
-.theme.sunnyday input[type="button"], .theme.sunnyday input[type="submit"], .theme.sunnyday button { background-color: rgb(136, 18, 18); color: #FFF; }
-.theme.sunnyday table.scorecard { background-color: #6cff6a; }
-.theme.sunnyday table td { border: 1px solid #000; }
-.theme.sunnyday table td.score { color: #000; }
-.theme.sunnyday table td.label { background-color: #126900; color: rgb(255, 251, 0); text-shadow: 1px 1px 0 rgb(71, 53, 18); }
-.theme.sunnyday table td.buttons button { border: 1px solid #000; }
-.theme.sunnyday table td.summary-score { background-color: #093500; color: #FFF; }
-.theme.sunnyday .bonus-message { color: rgb(107, 94, 22); background-color: #fffb00; }
-.theme.sunnyday .clear-button { color: rgb(14, 197, 0); }
-.theme.sunnyday .final-score { color: #000; border-bottom-left-radius: 8px; border-bottom-left-radius: 8px; }
-.theme.sunnyday select.theme-picker { background-color: #6cff6a; }
+.theme.midnight { background: rgb(3,84,133); background: linear-gradient(180deg, rgb(0 118 189) 0%, rgb(172 0 175) 100%) }
+.theme.midnight input[type="button"], .theme.midnight input[type="submit"], .theme.midnight button { background-color: #5100b3; color: #00e7ff; border-radius: 4px; font-weight: bold; box-shadow: none; border: 1px solid #000; }
+.theme.midnight input[type="number"] { border-radius: 4px; font-weight: bold; border: 1px solid #000; }
+.theme.midnight table td { border: 1px solid rgb(0, 0, 0); }
+.theme.midnight table td.score { color: #ffffff; text-shadow: 2px 2px 0 #000; }
+.theme.midnight table td.label { background-color: rgba(0, 0, 0, 0.25); color: #d8d8d8; }
+.theme.midnight table td.label .text { text-shadow: none; }
+.theme.midnight table td.summary-score { background-color: rgba(0, 0, 0, 0.75); color: #fff; text-shadow: 0px 0px 16px #fff; }
+.theme.midnight .bonus-message { color: #5100b3; background-color: #00e7ff; }
+.theme.midnight .clear-button { color: #d8d8d8; }
+.theme.midnight .score-label { font-size: 0.8em; }
+.theme.midnight .final-score { color: rgb(255, 255, 255); box-shadow: inset 0 0 32px rgba(0, 0, 0, 0.35); }
+.theme.midnight select.theme-picker { background-color: #000000; color: #00e7ff; border: 1px solid #000; border-radius: 3px; }
+.theme.midnight .reset-button { padding: 3px 16px; background-color: #5100b3; }
 
 /* THEME: TERMINAL */
 
@@ -105,23 +107,23 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.ocean select.theme-picker { background-color: #7bc4ff; color: #00293a; border: 1px solid #000; border-radius: 10px; }
 .theme.ocean .reset-button { padding: 3px 16px; background-color: rgb(8, 46, 82); }
 
-/* THEME: DIJON */
+/* THEME: SUNFLOWER */
 
-.theme.dijon { background-color: #fff; }
-.theme.dijon input[type="button"], .theme.dijon input[type="submit"], .theme.dijon button { background-color: #FF0; color: #000; border-radius: 4px; font-weight: bold; box-shadow: none; border: 1px solid #000; }
-.theme.dijon input[type="number"] { border-radius: 4px; font-weight: bold; border: 1px solid #000; }
-.theme.dijon table.scorecard { background-color: #fbffd7; }
-.theme.dijon table td { border: 1px solid #000; }
-.theme.dijon table td.score { color: #000000; }
-.theme.dijon table td.label { background-color: #fcff55; color: #000; }
-.theme.dijon table td.label .text { text-shadow: none; }
-.theme.dijon table td.summary-score { background-color: #000; color: rgb(255, 255, 102); }
-.theme.dijon .bonus-message { color: #000; background-color: #FF0; }
-.theme.dijon .clear-button { color: #5e5701; }
-.theme.dijon .score-label { font-size: 0.8em; }
-.theme.dijon .final-score { color: #000; }
-.theme.dijon select.theme-picker { background-color: #fbffd7; color: #000; border: 1px solid #000; border-radius: 3px; }
-.theme.dijon .reset-button { padding: 3px 16px; background-color: #FF0; }
+.theme.sunflower { background-color: #fff; }
+.theme.sunflower input[type="button"], .theme.sunflower input[type="submit"], .theme.sunflower button { background-color: #FF0; color: #000; border-radius: 4px; font-weight: bold; box-shadow: none; border: 1px solid #000; }
+.theme.sunflower input[type="number"] { border-radius: 4px; font-weight: bold; border: 1px solid #000; }
+.theme.sunflower table.scorecard { background-color: #fbffd7; }
+.theme.sunflower table td { border: 1px solid #000; }
+.theme.sunflower table td.score { color: #000000; }
+.theme.sunflower table td.label { background-color: #fcff55; color: #000; }
+.theme.sunflower table td.label .text { text-shadow: none; }
+.theme.sunflower table td.summary-score { background-color: #000; color: rgb(255, 255, 102); }
+.theme.sunflower .bonus-message { color: #000; background-color: #FF0; }
+.theme.sunflower .clear-button { color: #5e5701; }
+.theme.sunflower .score-label { font-size: 0.8em; }
+.theme.sunflower .final-score { color: #000; }
+.theme.sunflower select.theme-picker { background-color: #fbffd7; color: #000; border: 1px solid #000; border-radius: 3px; }
+.theme.sunflower .reset-button { padding: 3px 16px; background-color: #FF0; }
 
 @media (min-width: 40em) {
     body { max-width: 400px; margin: 0 auto; }
