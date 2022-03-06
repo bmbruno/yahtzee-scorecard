@@ -233,6 +233,9 @@ class Scorecard {
                 bonusRemaining.innerHTML = `${YS.getBonusRemaining()} remaining`;
             }
 
+            let turnCounter = document.getElementById("TurnCounter");
+            turnCounter.innerHTML = `${YS.scorecard.score.count} / 13`;
+
         },
 
         formatScore: function (scoreValue) {
