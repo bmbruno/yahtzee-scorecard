@@ -22,6 +22,8 @@ table td.buttons button { margin: 0; padding: 0.25em 0.5em; min-width: 36px; cur
 .clear-button { float: right; display: none; padding: 4px 8px; cursor: pointer; }
 .menu { margin: 1em 0; text-align: center; }
 .total-score, .final-score { font-weight: bold; font-size: 1.25em; }
+.final-score .total-container { float: left; width: 60%; text-align: right; }
+.final-score .turn-counter { font-size: 0.75em; margin-top: 0.25em; font-weight: normal; float: right; text-align: right; }
 select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; border-radius: 4px; padding: 4px; }
 
 /* THEME: DEFAULT */
@@ -138,7 +140,7 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.colorful .bonus-message { color: #000; background-color: #FFF; }
 .theme.colorful .clear-button { color: #d8d8d8; }
 .theme.colorful .score-label { font-size: 0.8em; }
-.theme.colorful .final-score { color: rgb(255, 255, 255); box-shadow: inset 0 0 32px rgba(0, 0, 0, 0.65); text-shadow: 1px 1px 0 #000; }
+.theme.colorful .final-score { color: rgb(255, 255, 255); box-shadow: inset 0 0 48px rgba(0, 0, 0, 0.75); text-shadow: 1px 1px 0 #000; }
 .theme.colorful select.theme-picker { background-color: #000; color: #FFF; border: 1px solid #000; border-radius: 3px; }
 .theme.colorful .reset-button { padding: 3px 16px; background-color: #000; }
 
