@@ -144,6 +144,23 @@ select.theme-picker { width: 40%; margin-right: 2em; border: 1px solid #000; bor
 .theme.colorful select.theme-picker { background-color: #000; color: #FFF; border: 1px solid #000; border-radius: 3px; }
 .theme.colorful .reset-button { padding: 3px 16px; background-color: #000; }
 
+/* THEME: PINKY */
+
+.theme.pinky { background-color: rgb(255, 0, 128); }
+.theme.pinky input[type="button"], .theme.pinky input[type="submit"], .theme.pinky button { background-color: #830051; color: rgb(255, 213, 233); border-radius: 4px; font-weight: bold; box-shadow: none; border: 1px solid #000; }
+.theme.pinky input[type="number"] { border-radius: 16px; font-weight: bold; border: 1px solid #000; }
+.theme.pinky table td { border: 1px solid rgb(0, 0, 0); }
+.theme.pinky table td.score { background-color: rgba(0, 0, 0, 0.15); color: #FFF; font-weight: bold; text-shadow: 1px 1px 0 #000; }
+.theme.pinky table td.label { background-color: rgb(155, 23, 78); color: #eee; }
+.theme.pinky table td.label .text { text-shadow: none; }
+.theme.pinky table td.summary-score { background-color: rgba(0, 0, 0, 0.75); color: #fff; }
+.theme.pinky .bonus-message { color: #000; background-color: #FFF; }
+.theme.pinky .clear-button { color: #d8d8d8; }
+.theme.pinky .score-label { font-size: 0.8em; }
+.theme.pinky .final-score { color: rgb(255, 255, 255); text-shadow: 1px 1px 0 #000; }
+.theme.pinky select.theme-picker { background-color: #830051; color: #FFF; border: 1px solid #000; border-radius: 3px; }
+.theme.pinky .reset-button { padding: 3px 16px; background-color: #000; }
+
 @media (min-width: 40em) {
     body { max-width: 400px; margin: 0 auto; }
 }
