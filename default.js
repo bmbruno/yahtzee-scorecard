@@ -349,6 +349,26 @@ class Scorecard {
             document.body.classList.add("theme");
             document.body.classList.add(themePicker.value);
 
+            if (themePicker.value === "surprise") {
+
+                // Randomly generate RGB values for both gradients
+                let red1 = Math.floor(Math.random() * 256);
+                let green1 = Math.floor(Math.random() * 256);
+                let blue1 = Math.floor(Math.random() * 256);
+
+                let red2 = Math.floor(Math.random() * 256);
+                let green2 = Math.floor(Math.random() * 256);
+                let blue2 = Math.floor(Math.random() * 256);
+
+                // Randomly choose gradient type/direction
+                let angle = Math.floor(Math.random() * 360);
+
+                document.body.style.background = `linear-gradient(${angle}deg, rgb(${red1} ${green1} ${blue1}), rgb(${red2} ${green2} ${blue2}))`;
+            } else {
+                // Let CSS theme take over the background
+                document.body.style.background = "";
+            }
+
             YS.saveTheme(themePicker.value);
         },
 
@@ -368,6 +388,8 @@ class Scorecard {
                 themePicker.value = theme;
                 YS.setTheme();
             }
+
+            
         }
     };
 
