@@ -360,8 +360,10 @@ class Scorecard {
                 let green2 = Math.floor(Math.random() * 256);
                 let blue2 = Math.floor(Math.random() * 256);
 
-                // Randomly choose gradient type/direction
+                // Randomly choose gradient type/direction, but keep it relatively vertical
                 let angle = Math.floor(Math.random() * 360);
+                if (angle < 135) angle = 135;
+                if (angle > 225) angle = 225;
 
                 document.body.style.background = `linear-gradient(${angle}deg, rgb(${red1} ${green1} ${blue1}), rgb(${red2} ${green2} ${blue2}))`;
             } else {
